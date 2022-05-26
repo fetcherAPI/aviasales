@@ -1,0 +1,39 @@
+@import "../scss/variables.scss";
+.label {
+  color: $text-color-dark;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.checkbox {
+  display: none;
+}
+.fakeCheckbox {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  border: 1px solid $chekbox-border-color;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 0.8rem;
+    height: 0.5rem;
+    background-image: url("../../assets/Shape.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+}
+.checkbox:checked + .fakeCheckbox {
+  border: 1px solid $secondary-color;
+}
+.checkbox:checked + .fakeCheckbox::before {
+  opacity: 1;
+}

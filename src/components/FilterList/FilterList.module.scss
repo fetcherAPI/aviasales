@@ -1,0 +1,20 @@
+@import "../scss/variables.scss";
+.filterBlock {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14em;
+  height: 252px;
+  box-shadow: $box-shadow;
+  border-radius: 5px;
+  background-color: $main-color;
+}
+.title {
+  color: $text-color-dark;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
