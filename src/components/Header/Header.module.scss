@@ -1,3 +1,5 @@
+@import "../scss/variables.scss";
+
 .header {
   width: 100%;
   display: flex;
@@ -5,5 +7,20 @@
   align-items: center;
   height: 200px;
   &__logo {
+    min-width: 10%;
+  }
+}
+
+@media only screen and (max-width: $screen-xs) {
+  .header {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: $screen-sm) {
+  .header {
+    &__logo {
+      width: 100px;
+    }
   }
 }

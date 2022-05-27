@@ -1,0 +1,35 @@
+@import "../scss/variables.scss";
+.tabLink {
+  border: 1px solid #dfe5ec;
+  background: $main-color;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $text-color-dark;
+  width: 15.688rem;
+  height: 3.125rem;
+  &:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  &:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+  &__active {
+    background: $secondary-color;
+    color: $main-color;
+  }
+}
+@media only screen and (max-width: $screen-sm) {
+  .tabLink {
+    width: 100%;
+    max-width: 31.375rem;
+    &:first-child {
+      border-radius: 8px;
+    }
+    &:last-child {
+      border-radius: 8px;
+    }
+  }
+}

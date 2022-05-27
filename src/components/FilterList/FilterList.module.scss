@@ -1,13 +1,13 @@
 @import "../scss/variables.scss";
 .filterBlock {
-  padding: 20px;
+  padding: $main-padding;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 14em;
   height: 252px;
   box-shadow: $box-shadow;
-  border-radius: 5px;
+  border-radius: $border-radius;
   background-color: $main-color;
 }
 .title {
@@ -17,4 +17,11 @@
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+@media only screen and (max-width: $screen-sm) {
+  .filterBlock {
+    width: 100%;
+    max-width: 31.375rem;
+    height: auto;
+  }
 }
