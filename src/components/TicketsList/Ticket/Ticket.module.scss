@@ -1,0 +1,66 @@
+@import '../../vars.scss';
+
+.ticket {
+  margin-bottom: 20px;
+  padding: 20px 20px 10px;
+  position: relative;
+}
+
+.ticketPrice {
+  margin: 6px 0 0;
+  padding: 0;
+  color: $flyColor;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.ticketPrice span {
+  padding-right: 6px;
+}
+
+.ticketLogo {
+  position: absolute;
+  z-index: 7;
+  top: 20px;
+  right: 20px;
+}
+
+.ticketDetails {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.details {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+}
+
+.detailsCol {
+  width: 33.3%;
+}
+
+.detailsList {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.dt {
+  color: #A0B0B9;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: $textColor;
+}

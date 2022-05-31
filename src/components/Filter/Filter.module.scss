@@ -1,39 +1,88 @@
-@import "../scss/variables.scss";
-.label {
-  color: $text-color-dark;
+@import '../vars.scss';
+
+.filters {
+  min-width: 502px;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width:754px) {
+  .filters {
+    width: 232px;
+    min-width: 232px;
+    margin-bottom: 0;
+  }
+}
+
+.transfers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transfer {
+  height: 40px;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  cursor: pointer;
+  transition: .3s background-color linear;
+}
+
+.transfer__hover, .transfer:hover {
+  background-color: #F1FCFF;
+}
+
+.transfer__title {
+  padding: 15px 20px 5px;
+  cursor: default;
+}
+.transfer__title:hover {
+  background-color: transparent;
+}
+
+.check {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 13px;
+  line-height: 20px;
+  cursor: pointer;
 }
 
 .checkbox {
-  display: none;
-}
-.fakeCheckbox {
-  display: inline-block;
-  min-width: 20px;
-  height: 20px;
-  border: 1px solid $chekbox-border-color;
-  border-radius: 2px;
+  width: 20px;
+  height: 0;
+  margin-left: 0;
+  margin-right: 10px;
   cursor: pointer;
+  outline: none;
+}
+
+.checkbox::before {
+  content: "";
+  display: inline-block;
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    width: 0.8rem;
-    height: 0.5rem;
-    background-image: url("../../assets/Shape.png");
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-    opacity: 0;
-  }
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: $clearColor;
+  background-image: url(./checkbox-sprite.svg);
+  background-position: -20px 0;
+  background-repeat: no-repeat;
 }
-.checkbox:checked + .fakeCheckbox {
-  border: 1px solid $secondary-color;
+
+.checkbox:checked::before {
+  background-position: 0 0;
 }
-.checkbox:checked + .fakeCheckbox::before {
-  opacity: 1;
+
+.check:hover .checkbox::before {
+  background-position: -60px 0;
+}
+
+.check:hover .checkbox:checked::before {
+  background-position: -40px 0;
 }

@@ -1,0 +1,16 @@
+@import '../vars.scss';
+
+.tickets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note {
+  padding: 50px;
+  text-align: center;
+  background-color: $clearColor;
+  border-radius: 5px;
+  font-size: .9rem;
+  color: indianred;
+}
