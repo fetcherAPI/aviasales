@@ -1,5 +1,6 @@
 @import "../scss/variables.scss";
 .app {
+  min-width: 514px;
   display: flex;
   flex-direction: column;
 }
